@@ -1,0 +1,8 @@
+.radio_but{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    font-size: 12px;
+    margin-top: 15px;
+}
+

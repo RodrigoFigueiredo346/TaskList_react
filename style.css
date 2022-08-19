@@ -1,0 +1,277 @@
+* {
+    margin-top: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background: #e4e7ef;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+body, input, button, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+aside {
+
+    width: 300px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px  rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: fixed;
+}
+
+aside strong {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    color: #333;
+}
+
+aside form {
+    margin-top: 30px;
+}
+
+aside form .input-block label {
+
+    margin-top: 20px;
+    color: #acacac;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+
+aside form .input-block input {
+    
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+
+aside form .input-block textarea {
+
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    resize: none;
+}
+
+
+aside form button[type=submit] {
+
+    width: 100%;
+    border: 0;
+    margin-top: 30px;
+    background: #80adff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;    
+}
+
+
+#app{
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+}
+
+
+
+main {
+    flex: 1;
+    margin-left: 335px;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+}
+
+/* li priority false */
+li.notepad-infos div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li.notepad-infos {
+   background: #fff;
+   box-shadow: 0 0 14px rgbd(0,0,0,0.2);
+   border-radius: 10px;
+   padding: 20px 20px 10px 20px;
+
+}
+
+li.notepad-infos strong {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+li.notepad-infos div div {
+    color: black;
+    cursor: pointer;
+
+}
+
+li.notepad-infos div div:hover {
+    color: gray;
+    transition: 0.2s;
+
+}
+
+li.notepad-infos textarea{
+    padding: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    background: #fff;
+    resize: none;
+}
+
+li.notepad-infos span {
+    color: black;
+    transition: 0.2s;
+}
+
+li.notepad-infos span:hover {
+    color: #eb8f7a;
+    transition: 0.2s;
+}
+
+/* li priority true */
+
+li.notepad-infos-priority div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li.notepad-infos-priority {
+   background: #96b5ee;
+   box-shadow: 0 0 14px rgbd(0,0,0,0.2);
+   border-radius: 10px;
+   padding: 20px 20px 10px 20px;
+
+}
+
+li.notepad-infos-priority strong {
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+li.notepad-infos-priority div div {
+    color: #fff;
+    cursor: pointer;
+
+}
+
+li.notepad-infos-priority div div:hover {
+    color: #eb8f7a;
+    transition: 0.2s;
+
+}
+
+li.notepad-infos-priority textarea{
+    padding: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    font-size: 14px;
+    color: white;
+    border: 0;
+    background: #96b5ee;
+    resize: none;
+}
+
+li.notepad-infos-priority-priority textarea{
+    padding: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    font-size: 14px;
+    color: #fff;
+    border: 0;
+    background: #eb8f7a;
+    resize: none;
+}
+
+
+li.notepad-infos-priority span {
+    color: #fff;
+    transition: 0.2s;
+}
+
+li.notepad-infos-priority span:hover {
+    color: #eb8f7a;
+    transition: 0.2s;
+}
+
+
+
+
+@media (max-width: 1000px){
+    #app {
+        flex-direction: column;
+    }
+
+    aside {
+        position: relative;
+        width: 100%;
+    }
+
+    main{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 600px){
+
+    main ul {
+        margin-left: 0px;
+        grid-template-columns: 1fr;
+        
+    }
+
+    aside {
+        width: 100%
+    }
+
+}
